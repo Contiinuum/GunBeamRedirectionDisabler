@@ -1,0 +1,6 @@
+
+*.cache
+*.CopyComplete
+GunBeamRedirectionDisabler/obj/Release/GunBeamRedirectionDisabler.csproj.FileListAbsolute.txt
+*.dll
+*.pdb
