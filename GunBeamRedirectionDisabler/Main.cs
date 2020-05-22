@@ -25,7 +25,7 @@ namespace GunBeamRedirectionDisabler
             Gun_AdjustAutoaimedPosition = instance.Patch(SDK.GetClass("Gun").GetMethod("AdjustAutoaimedPosition"), typeof(GunBeamRedirectionDisabler).GetMethod("AdjustAutoaimedPosition"));
         }
 
-        public static unsafe void AdjustAutoaimedPosition(IntPtr gun, IntPtr target, IntPtr intersection, int firepointHistoryIndex, bool forceForAutoplay)
+        public static unsafe IntPtr AdjustAutoaimedPosition(IntPtr gun, IntPtr target, IntPtr intersection, int firepointHistoryIndex, bool forceForAutoplay)
         {
             /*
             Gun_AdjustAutoaimedPosition.InvokeOriginal(gun, new IntPtr[]
@@ -36,6 +36,7 @@ namespace GunBeamRedirectionDisabler
                 new IntPtr((void*)(&forceForAutoplay))
             });
             */
+            return intersection;
         }
 
         /*
